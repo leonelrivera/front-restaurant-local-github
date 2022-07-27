@@ -1,0 +1,11 @@
+version: "3"
+services:
+  front:
+    build: .
+    container_name: front-restaurante
+    restart: always
+    ports:
+      - ${PUERTO}:${PUERTO}
+    volumes:
+      - .:/front
+    command: quasar dev
